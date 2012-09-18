@@ -14,7 +14,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-group :assets do
+group :assets do  
   gem 'sass-rails',   '3.2.4'
   gem 'coffee-rails', '3.2.2'
   gem 'uglifier', '1.2.3'
@@ -34,6 +34,8 @@ group :test do
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
+  gem 'rb-inotify', '0.8.8'
+  gem 'libnotify', '0.5.9'
 end
 
 group :production do

@@ -61,6 +61,7 @@ describe User do
 
       it { should_not be_following(other_user) }
       its(:followed_users) { should_not include(other_user) }
+      it { Relationship.find_by_id(other_user.id).should be_nil }
     end
   end
   
@@ -216,7 +217,7 @@ end
       its(:feed) { should_not include(unfollowed_post) }
       its(:feed) do
         followed_user.microposts.each do |micropost|
-          should include(micropost)
+          should include(micropost) 
         end
       end
     end

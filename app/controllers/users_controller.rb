@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  
+  # Filters are methods that are run before, after or “around” a controller action. Methods are below
   before_filter :signed_in_user, only: [:index, :edit, :update, :destroy, :following, :followers]
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user,     only: :destroy

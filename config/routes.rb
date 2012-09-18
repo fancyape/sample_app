@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+# resources automatically creates routes for path and url for actions such as index, edit, new, etc.
   resources :users do
     member do
       get :following, :followers
@@ -8,7 +9,8 @@ SampleApp::Application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   
-  root to: 'static_pages#home'
+  # static pages single resource destination page  
+  root to: 'static_pages#home'  
   
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

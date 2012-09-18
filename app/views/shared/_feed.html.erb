@@ -1,5 +1,6 @@
 <% if @feed_items.any? %>
   <ol class="microposts">
+  <!-- this will render each @feed_item into the feed_item partial and repeat -->
     <%= render partial: 'shared/feed_item', collection: @feed_items %>
   </ol>
   <%= will_paginate @feed_items %>

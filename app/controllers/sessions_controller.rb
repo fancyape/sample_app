@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
+# this controller should really be named LoginController because 'login' would appear in the URL view in the browser
+# instead of 'sessions' which users might be unfamiliar with.
 
- def new
+  def new
   end
 
   def create
